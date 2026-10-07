@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plant-ai"
+version = "1.0.0"
+description = "Industrial AI for chemical dosing and effluent treatment: a seeded plant simulator, Modbus TCP, a historian, ISA-18.2 alarms, anomaly detection, dosing optimisation and a guarded maintenance assistant."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Samiul Huda" }]
+dependencies = [
+  "numpy>=1.26",
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "pymodbus==3.15.0",  # pinned: the server datastore API changes between minor versions
+  "openai>=1.50",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "httpx>=0.27", "ruff==0.16.10"]
+
+[project.scripts]
+plant-ai = "plant_ai.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["plant_ai*"]
+
+[tool.setuptools.package-data]
+plant_ai = ["assistant/kb/*.md", "web/static/*", "web/static/vendor/*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+# HTML templates keep their CSS rules on one line each.
+"plant_ai/reports.py" = ["E501"]
+"plant_ai/eval/report.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning"]

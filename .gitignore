@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Node
+node_modules/
+
+# Generated data (regenerate with `plant-ai simulate` or `plant-ai demo`)
+data/
+reports/
+*.db
+*.db-wal
+*.db-shm
+.cache/
+
+# Secrets and local settings
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
