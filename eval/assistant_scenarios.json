@@ -1,0 +1,378 @@
+[
+ {
+  "id": "A01",
+  "split": "tune",
+  "seed": 301,
+  "fault": {
+   "kind": "shock_load",
+   "target": "FIT-101",
+   "magnitude": 1.0,
+   "duration": 40,
+   "grace": 180
+  },
+  "expected_sop": "SOP-01"
+ },
+ {
+  "id": "A02",
+  "split": "tune",
+  "seed": 302,
+  "fault": {
+   "kind": "shock_load",
+   "target": "FIT-101",
+   "magnitude": 0.85,
+   "duration": 35,
+   "grace": 180
+  },
+  "expected_sop": "SOP-01"
+ },
+ {
+  "id": "A03",
+  "split": "tune",
+  "seed": 303,
+  "fault": {
+   "kind": "shock_load",
+   "target": "FIT-101",
+   "magnitude": 1.15,
+   "duration": 45,
+   "grace": 180
+  },
+  "expected_sop": "SOP-01"
+ },
+ {
+  "id": "A04",
+  "split": "heldout",
+  "seed": 704,
+  "fault": {
+   "kind": "shock_load",
+   "target": "FIT-101",
+   "magnitude": 0.9,
+   "duration": 40,
+   "grace": 180
+  },
+  "expected_sop": "SOP-01"
+ },
+ {
+  "id": "A05",
+  "split": "tune",
+  "seed": 305,
+  "fault": {
+   "kind": "ph_drift",
+   "target": "AIT-201",
+   "magnitude": 0.7,
+   "duration": 180
+  },
+  "expected_sop": "SOP-03"
+ },
+ {
+  "id": "A06",
+  "split": "tune",
+  "seed": 306,
+  "fault": {
+   "kind": "ph_drift",
+   "target": "AIT-201",
+   "magnitude": -0.6,
+   "duration": 180
+  },
+  "expected_sop": "SOP-03"
+ },
+ {
+  "id": "A07",
+  "split": "tune",
+  "seed": 307,
+  "fault": {
+   "kind": "ph_drift",
+   "target": "AIT-201B",
+   "magnitude": 0.8,
+   "duration": 180
+  },
+  "expected_sop": "SOP-03"
+ },
+ {
+  "id": "A08",
+  "split": "heldout",
+  "seed": 708,
+  "fault": {
+   "kind": "ph_drift",
+   "target": "AIT-201",
+   "magnitude": -0.8,
+   "duration": 180
+  },
+  "expected_sop": "SOP-03"
+ },
+ {
+  "id": "A09",
+  "split": "heldout",
+  "seed": 709,
+  "fault": {
+   "kind": "ph_drift",
+   "target": "AIT-201B",
+   "magnitude": -0.6,
+   "duration": 180
+  },
+  "expected_sop": "SOP-03"
+ },
+ {
+  "id": "A10",
+  "split": "tune",
+  "seed": 310,
+  "fault": {
+   "kind": "pump_clog",
+   "target": "P-202",
+   "magnitude": 0.8,
+   "duration": 180
+  },
+  "expected_sop": "SOP-04"
+ },
+ {
+  "id": "A11",
+  "split": "tune",
+  "seed": 311,
+  "fault": {
+   "kind": "pump_clog",
+   "target": "P-202",
+   "magnitude": 0.65,
+   "duration": 180
+  },
+  "expected_sop": "SOP-04"
+ },
+ {
+  "id": "A12",
+  "split": "tune",
+  "seed": 312,
+  "fault": {
+   "kind": "pump_clog",
+   "target": "P-202",
+   "magnitude": 0.9,
+   "duration": 180
+  },
+  "expected_sop": "SOP-04"
+ },
+ {
+  "id": "A13",
+  "split": "heldout",
+  "seed": 713,
+  "fault": {
+   "kind": "pump_clog",
+   "target": "P-202",
+   "magnitude": 0.75,
+   "duration": 180
+  },
+  "expected_sop": "SOP-04"
+ },
+ {
+  "id": "A14",
+  "split": "tune",
+  "seed": 314,
+  "fault": {
+   "kind": "tank_low",
+   "target": "LIT-202",
+   "magnitude": 20,
+   "duration": 270
+  },
+  "expected_sop": "SOP-05"
+ },
+ {
+  "id": "A15",
+  "split": "tune",
+  "seed": 315,
+  "fault": {
+   "kind": "tank_low",
+   "target": "LIT-901",
+   "magnitude": 25,
+   "duration": 270
+  },
+  "expected_sop": "SOP-13"
+ },
+ {
+  "id": "A16",
+  "split": "tune",
+  "seed": 316,
+  "fault": {
+   "kind": "tank_low",
+   "target": "LIT-202",
+   "magnitude": 28,
+   "duration": 270
+  },
+  "expected_sop": "SOP-05"
+ },
+ {
+  "id": "A17",
+  "split": "heldout",
+  "seed": 717,
+  "fault": {
+   "kind": "tank_low",
+   "target": "LIT-202",
+   "magnitude": 17,
+   "duration": 270
+  },
+  "expected_sop": "SOP-05"
+ },
+ {
+  "id": "A18",
+  "split": "heldout",
+  "seed": 718,
+  "fault": {
+   "kind": "tank_low",
+   "target": "LIT-901",
+   "magnitude": 18,
+   "duration": 270
+  },
+  "expected_sop": "SOP-13"
+ },
+ {
+  "id": "A19",
+  "split": "tune",
+  "seed": 319,
+  "fault": {
+   "kind": "blower_fail",
+   "target": "B-301",
+   "magnitude": 0,
+   "duration": 90
+  },
+  "expected_sop": "SOP-06"
+ },
+ {
+  "id": "A20",
+  "split": "tune",
+  "seed": 320,
+  "fault": {
+   "kind": "blower_fail",
+   "target": "B-301",
+   "magnitude": 0,
+   "duration": 60
+  },
+  "expected_sop": "SOP-06"
+ },
+ {
+  "id": "A21",
+  "split": "tune",
+  "seed": 321,
+  "fault": {
+   "kind": "blower_fail",
+   "target": "B-301",
+   "magnitude": 0,
+   "duration": 120
+  },
+  "expected_sop": "SOP-06"
+ },
+ {
+  "id": "A22",
+  "split": "heldout",
+  "seed": 722,
+  "fault": {
+   "kind": "blower_fail",
+   "target": "B-301",
+   "magnitude": 0,
+   "duration": 75
+  },
+  "expected_sop": "SOP-06"
+ },
+ {
+  "id": "A23",
+  "split": "tune",
+  "seed": 323,
+  "fault": {
+   "kind": "stuck_valve",
+   "target": "FV-101",
+   "magnitude": -20,
+   "duration": 180
+  },
+  "expected_sop": "SOP-07"
+ },
+ {
+  "id": "A24",
+  "split": "tune",
+  "seed": 324,
+  "fault": {
+   "kind": "stuck_valve",
+   "target": "FV-101",
+   "magnitude": 18,
+   "duration": 180
+  },
+  "expected_sop": "SOP-07"
+ },
+ {
+  "id": "A25",
+  "split": "tune",
+  "seed": 325,
+  "fault": {
+   "kind": "stuck_valve",
+   "target": "FV-101",
+   "magnitude": -14,
+   "duration": 180
+  },
+  "expected_sop": "SOP-07"
+ },
+ {
+  "id": "A26",
+  "split": "heldout",
+  "seed": 726,
+  "fault": {
+   "kind": "stuck_valve",
+   "target": "FV-101",
+   "magnitude": 22,
+   "duration": 180
+  },
+  "expected_sop": "SOP-07"
+ },
+ {
+  "id": "A27",
+  "split": "tune",
+  "seed": 327,
+  "fault": {
+   "kind": "flatline",
+   "target": "AIT-301",
+   "magnitude": 0,
+   "duration": 180
+  },
+  "expected_sop": "SOP-08"
+ },
+ {
+  "id": "A28",
+  "split": "tune",
+  "seed": 328,
+  "fault": {
+   "kind": "flatline",
+   "target": "AIT-401",
+   "magnitude": 0,
+   "duration": 180
+  },
+  "expected_sop": "SOP-08"
+ },
+ {
+  "id": "A29",
+  "split": "tune",
+  "seed": 329,
+  "fault": {
+   "kind": "flatline",
+   "target": "FIT-101",
+   "magnitude": 0,
+   "duration": 180
+  },
+  "expected_sop": "SOP-08"
+ },
+ {
+  "id": "A30",
+  "split": "heldout",
+  "seed": 730,
+  "fault": {
+   "kind": "flatline",
+   "target": "AIT-401",
+   "magnitude": 0,
+   "duration": 180
+  },
+  "expected_sop": "SOP-08"
+ },
+ {
+  "id": "A31",
+  "split": "heldout",
+  "seed": 731,
+  "fault": {
+   "kind": "flatline",
+   "target": "FIT-101",
+   "magnitude": 0,
+   "duration": 180
+  },
+  "expected_sop": "SOP-08"
+ }
+]
