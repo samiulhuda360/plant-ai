@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plant AI - Effluent Treatment HMI</title>
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="/static/vendor/chart.umd.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo" aria-hidden="true"></span>
+      <div>
+        <div class="title">Acme Textiles &middot; Effluent Treatment Plant</div>
+        <div class="subtitle">plant-ai operator dashboard</div>
+      </div>
+    </div>
+    <div class="status">
+      <div class="stat"><span>Plant time</span><b id="clock">--</b></div>
+      <div class="stat"><span>Dosing</span><b id="mode">--</b></div>
+      <div class="stat"><span>Collector</span><b id="collector">--</b></div>
+      <div class="stat"><span>Discharge consent</span><b id="consent">--</b></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel mimic-panel" id="overview">
+      <div class="panel-head">
+        <h2>Process overview</h2>
+        <div class="legend">
+          <span class="chip p-Critical">Critical</span><span class="chip p-High">High</span>
+          <span class="chip p-Medium">Medium</span><span class="chip p-Low">Low</span>
+          <span class="muted">Grey is normal; colour means an active alarm.</span>
+        </div>
+      </div>
+      <svg id="mimic" viewBox="0 0 1240 360" role="img" aria-label="Plant mimic"></svg>
+    </section>
+
+    <div class="grid">
+      <section class="panel" id="trends">
+        <div class="panel-head">
+          <h2>Trends</h2>
+          <div class="seg" id="hours">
+            <button data-h="2">2 h</button><button data-h="6" class="on">6 h</button><button data-h="24">24 h</button>
+          </div>
+        </div>
+        <div class="chips" id="tagchips"></div>
+        <div class="chart-wrap"><canvas id="chart"></canvas></div>
+      </section>
+
+      <section class="panel" id="alarms">
+        <div class="panel-head">
+          <h2>Alarms</h2>
+          <div class="seg" id="alarmfilter">
+            <button data-f="active" class="on">Active</button><button data-f="all">History</button>
+          </div>
+        </div>
+        <div class="table-wrap"><table class="alarm-table">
+          <thead><tr><th></th><th>Raised</th><th>Tag</th><th>Alarm</th><th>Layer</th><th>State</th><th></th></tr></thead>
+          <tbody id="alarmrows"></tbody>
+        </table></div>
+      </section>
+
+      <section class="panel" id="incidents">
+        <div class="panel-head"><h2>Incidents</h2><span class="muted" id="kpis"></span></div>
+        <div id="incidentlist" class="incident-list"></div>
+      </section>
+
+      <section class="panel" id="assistant">
+        <div class="panel-head">
+          <h2>Maintenance assistant</h2>
+          <span class="muted" id="asst-mode"></span>
+        </div>
+        <div id="asst-body" class="asst-body">
+          <p class="muted">Pick an alarm and press <b>Explain</b>. The assistant reads the alarm, the last hour of tag
+            history and the SOPs, then suggests checks and drafts a handover note. It cannot operate equipment.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="training">
+        <div class="panel-head"><h2>Simulator training panel</h2><span class="muted">plants a fault in the simulator, not the plant</span></div>
+        <div class="fault-buttons" id="faultbuttons"></div>
+        <div id="activefaults" class="muted"></div>
+      </section>
+
+      <section class="panel" id="reports">
+        <div class="panel-head"><h2>Reports</h2></div>
+        <ul class="report-links">
+          <li><a href="/reports/compliance" target="_blank">Daily discharge-compliance report</a></li>
+          <li><a href="/reports/shift" target="_blank">Current shift report</a></li>
+          <li><a href="/reports/shift?which=previous" target="_blank">Previous shift report</a></li>
+          <li><a href="/api/docs" target="_blank">API reference</a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
