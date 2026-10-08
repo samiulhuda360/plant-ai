@@ -2,7 +2,7 @@
 
 The PLC simulator (`plant-ai modbus-server`, or the `demo` command) is a Modbus TCP server, device id 1, default
 port 5020. All values are unsigned 16-bit integers; divide by the scale to get engineering units. The collector
-reads the whole input-register block (39 registers) in one function-code 4 request per poll.
+reads the whole input-register block (37 registers) in one function-code 4 request per poll.
 
 ## Input registers (function code 4, read only)
 

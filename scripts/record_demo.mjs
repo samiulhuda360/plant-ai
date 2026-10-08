@@ -38,7 +38,7 @@ await page.waitForTimeout(1200)
 
 // 2. Back to the mimic: the blower shows FAIL and dissolved oxygen turns red.
 await smoothScroll(page, null, -1400, { steps: 18, delay: 35 })
-await page.waitForTimeout(4500)
+await page.waitForTimeout(10000)
 
 // 3. The alarm list: explain the new blower alarm.
 await smoothScroll(page, null, 520, { steps: 12, delay: 35 })
