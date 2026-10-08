@@ -79,11 +79,14 @@ class AlarmContext:
 
     def query(self) -> str:
         a = self.alarm
-        parts = [a["message"], a["tag"]]
+        top = (a.get("evidence") or {}).get("top_contributors", {})
+        # For a PCA alarm, search on the tags that carry most of the statistic, not on every tag it lists.
+        strong = [k for k, share in top.items() if share >= 0.15]
+        parts = [a["message"].split(":")[0] if top else a["message"], a["tag"]]
         if a["tag"] in BY_NAME:
             parts.append(BY_NAME[a["tag"]].description)
-        for k in (a.get("evidence") or {}).get("top_contributors", {}):
-            parts += [k, BY_NAME[k].description if k in BY_NAME else ""]
+        for k in strong:
+            parts += [k, k, BY_NAME[k].description if k in BY_NAME else ""]
         for r in self.related[:5]:
             parts += [r["message"], r["tag"]]
         return " ".join(parts)

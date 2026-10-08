@@ -29,3 +29,4 @@ reports/
 Thumbs.db
 .vscode/
 .idea/
+eval/embedding-cache/
