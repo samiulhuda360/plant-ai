@@ -2,15 +2,72 @@
 
 ![Demo: a blower failure is planted, the HMI flags it, and the assistant explains it with SOP citations](docs/demo.gif)
 
-plant-ai is a working model of the automation and data stack around a textile mill's effluent treatment plant
-(ETP) and its dye-house chemical dispensing station. A seeded plant simulator acts as the PLC and serves its tags
-over **Modbus TCP**. A collector polls them into a **historian**, an **ISA-18.2-style alarm system** with sensor-health
-checks and **PCA anomaly detection** raises incidents, **adaptive dosing control** cuts chemical and energy use,
-and a **guarded maintenance assistant** explains alarms from the plant's SOPs. Daily compliance and shift reports
-come straight from the historian.
+*A short recording of the control-room screen: the plant's air blower is made to fail, the screen turns it red,
+and the assistant explains what went wrong, quoting the plant's own procedures.*
 
-It is built for people who work where process plants meet data: automation and controls engineers, OT and IIoT
-data engineers, and manufacturing analytics teams. The process knowledge comes from commissioning automated
+## What it does
+
+Textile mills that dye cloth produce hot, coloured, chemical-laden waste water, which must be cleaned before it
+leaves the site. This project runs a realistic model of that clean-up plant and of the station that measures out
+the dye chemicals. It watches every reading, spots faults early, sets chemical doses to match the incoming load
+so less is wasted, and gives the operator a plain explanation of each alarm. It never operates equipment by
+itself.
+
+## A real-life example
+
+Ravi is the night-shift operator at the waste-water plant of Acme Textiles, a cotton dyeing mill.
+
+**Before:** the chemical pumps run at a fixed rate sized for the worst case, so most of the time they overdose,
+and when a big batch of spent dye arrives they still fall behind and the discharge goes out of its legal limits.
+A fault such as a slowly drifting pH probe or a stuck valve is easy to miss among the alarms, and when the air
+blower trips at 3 a.m. Ravi has to find the right page in the procedures binder and then write up the handover
+note for the morning shift.
+
+**With plant-ai:**
+1. One screen shows the whole plant, from the dye house to the discharge pipe. Grey means normal; colour means
+   something needs attention.
+2. When the blower stops, the related alarms arrive as one incident, with the first cause at the top, rather than
+   a flood of separate alarms.
+3. He clicks "explain". The assistant says what is happening, lists likely causes and checks, quotes the matching
+   procedure, and drafts the handover note.
+4. Chemical doses follow the actual waste coming in, and the daily discharge report and shift report are produced
+   automatically.
+
+**After:** in testing on runs it had never seen, adaptive dosing used 20% less coagulant chemical and 26% less
+blower energy, and the discharge stayed inside its limits all of the time (against 4.3% of the time outside with
+fixed dosing). All 70 planted faults were found, typically in 13 minutes rather than 45. The assistant picked the
+right procedure every time and answered in about 2.3 seconds.
+
+![Ravi's night shift in four steps: the plant screen, the blower incident, the assistant's explanation and the daily report](docs/screenshots/example.gif)
+
+*Ravi's night shift in four steps, from real screens of the dashboard: the plant at a glance, the blower failure
+as one incident, the assistant's explanation and handover note, and the next day's discharge report.*
+
+## How you would use it
+
+1. Open the operator dashboard in your web browser.
+2. Watch the plant picture. Grey boxes are normal; a coloured box means an active alarm.
+3. Check the incident list: related alarms are grouped, the most serious first.
+4. Pick an alarm and click explain. Read the causes and checks, then copy or edit the handover note.
+5. At the end of the day, open the daily compliance report or the shift report and print or save it.
+6. For training, use the simulator panel to set off a fault and practise finding it.
+
+The technical setup is in [Setup](#setup) further down.
+
+## Overview
+
+plant-ai is a working model of the automation and data stack around a textile mill's effluent treatment plant
+(ETP) and its dye-house chemical dispensing station. A seeded plant simulator acts as the PLC (the industrial
+controller that runs the equipment) and serves its tags (named readings and settings) over **Modbus TCP** (the
+common factory network protocol). A collector polls them into a **historian** (a database of every reading over
+time), an **ISA-18.2-style alarm system** (following the industry standard for managing alarms) with sensor-health
+checks and **PCA anomaly detection** (a statistical check for readings that stop moving together as they normally
+do) raises incidents, **adaptive dosing control** cuts chemical and energy use, and a **guarded maintenance
+assistant** explains alarms from the plant's SOPs (standard operating procedures). Daily compliance and shift
+reports come straight from the historian.
+
+It is built for people who work where process plants meet data: automation and controls engineers, OT
+(operational technology) and IIoT (industrial internet of things) data engineers, and manufacturing analytics teams. The process knowledge comes from commissioning automated
 chemical-dispensing systems for textile dyeing and automating chemical dosing in effluent treatment plants.
 
 The mill, Acme Textiles, and all its data are fictional.
@@ -29,11 +86,12 @@ The mill, Acme Textiles, and all its data are fictional.
   (Hotelling T-squared and SPE) with the top contributing tags.
 - **Dosing optimisation**: fixed-rate baseline against a soft-sensor feed-forward strategy with PI trims and DO
   control, measured on chemical use, energy and time out of the discharge consent.
-- **Maintenance assistant**: BM25 over 16 SOPs (optional embeddings), an LLM step that explains the alarm, suggests
+- **Maintenance assistant**: BM25 (keyword search ranking) over 16 SOPs (optional embeddings), an LLM (AI language
+  model) step that explains the alarm, suggests
   checks and drafts a handover note, and guards against invented readings, missing citations and any command to
   equipment. Without an API key it answers from retrieval and a template.
 - **Reports**: daily discharge-compliance report and shift report with ISA-18.2 alarm KPIs.
-- **Dashboard**: a high-performance HMI style page with a plant mimic, trends, alarms, incidents, the assistant
+- **Dashboard**: a high-performance HMI (operator screen) style page with a plant mimic, trends, alarms, incidents, the assistant
   and a simulator training panel.
 
 ## Screenshots
@@ -41,18 +99,22 @@ The mill, Acme Textiles, and all its data are fictional.
 | Process overview (mimic) | Assistant with guards |
 |---|---|
 | ![Plant mimic](docs/screenshots/mimic.png) | ![Assistant](docs/screenshots/assistant.png) |
+| The whole plant on one screen, with the live readings at each stage. Grey is normal; colour means an alarm. | The assistant's answer to a blower alarm: what is happening, likely causes, checks, a handover note, and the procedures it quoted. |
 
 | Alarms | Incidents |
 |---|---|
 | ![Alarm list](docs/screenshots/alarms.png) | ![Incidents](docs/screenshots/incidents.png) |
+| Every alarm with its state, priority and time. | Related alarms grouped into one incident, with the first cause on top. |
 
 | Daily compliance report | Shift report |
 |---|---|
 | ![Compliance report](docs/screenshots/compliance-report.png) | ![Shift report](docs/screenshots/shift-report.png) |
+| The day's discharge readings against the legal limits, chemical use and energy, ready to sign. | A summary of one shift: alarms, incidents, alarm rates and chemical use. |
 
 | Modbus TCP read of every tag | Evaluation |
 |---|---|
 | ![read-tags](docs/screenshots/modbus-read-tags.png) | ![Evaluation](docs/screenshots/evaluation.png) |
+| Every live reading pulled from the simulated controller over the factory network. | Test results for fault finding, dosing and the assistant. |
 
 The full dashboard: [docs/screenshots/dashboard.png](docs/screenshots/dashboard.png).
 
