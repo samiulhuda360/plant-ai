@@ -1,0 +1,437 @@
+{
+ "tune": {
+  "seeds": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "minutes_per_run": 5760,
+  "threshold": {
+   "runs": 6,
+   "faults": 42,
+   "detected": 32,
+   "recall": 0.762,
+   "precision": 0.91,
+   "true_alerts": 152,
+   "false_alerts": 15,
+   "false_alerts_per_day": 0.62,
+   "median_ttd_min": 52.0,
+   "peak_alerts_10min": 5,
+   "peak_alerts_10min_without_suppression": 5,
+   "by_fault": {
+    "ph_drift": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 91.0
+    },
+    "pump_clog": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 47.5
+    },
+    "tank_low": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 106.0
+    },
+    "shock_load": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 1.0
+    },
+    "blower_fail": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 1.0
+    },
+    "stuck_valve": {
+     "faults": 6,
+     "detected": 1,
+     "recall": 0.167,
+     "median_ttd_min": 158
+    },
+    "flatline": {
+     "faults": 6,
+     "detected": 1,
+     "recall": 0.167,
+     "median_ttd_min": 292
+    }
+   },
+   "missed": [
+    {
+     "seed": 1,
+     "fault": "flatline",
+     "target": "FIT-101",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 2,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 16.38
+    },
+    {
+     "seed": 3,
+     "fault": "flatline",
+     "target": "FIT-101",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 3,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 12.87
+    },
+    {
+     "seed": 4,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 15.11
+    },
+    {
+     "seed": 4,
+     "fault": "flatline",
+     "target": "AIT-401",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 5,
+     "fault": "flatline",
+     "target": "FIT-101",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 5,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 19.1
+    },
+    {
+     "seed": 6,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": -21.41
+    },
+    {
+     "seed": 6,
+     "fault": "flatline",
+     "target": "AIT-301",
+     "magnitude": 0.0
+    }
+   ]
+  },
+  "full": {
+   "runs": 6,
+   "faults": 42,
+   "detected": 42,
+   "recall": 1.0,
+   "precision": 0.902,
+   "true_alerts": 285,
+   "false_alerts": 31,
+   "false_alerts_per_day": 1.29,
+   "median_ttd_min": 13.5,
+   "peak_alerts_10min": 8,
+   "peak_alerts_10min_without_suppression": 8,
+   "by_fault": {
+    "ph_drift": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 13.5
+    },
+    "pump_clog": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 35.0
+    },
+    "tank_low": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 48.0
+    },
+    "shock_load": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 0.0
+    },
+    "blower_fail": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 0.0
+    },
+    "stuck_valve": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 2.0
+    },
+    "flatline": {
+     "faults": 6,
+     "detected": 6,
+     "recall": 1.0,
+     "median_ttd_min": 29.0
+    }
+   },
+   "missed": []
+  }
+ },
+ "heldout": {
+  "seeds": [
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109,
+   110
+  ],
+  "minutes_per_run": 5760,
+  "threshold": {
+   "runs": 10,
+   "faults": 70,
+   "detected": 51,
+   "recall": 0.729,
+   "precision": 0.917,
+   "true_alerts": 222,
+   "false_alerts": 20,
+   "false_alerts_per_day": 0.5,
+   "median_ttd_min": 45,
+   "peak_alerts_10min": 5,
+   "peak_alerts_10min_without_suppression": 5,
+   "by_fault": {
+    "ph_drift": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 84.5
+    },
+    "pump_clog": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 48.5
+    },
+    "tank_low": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 74.5
+    },
+    "shock_load": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 1.0
+    },
+    "blower_fail": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 1.0
+    },
+    "stuck_valve": {
+     "faults": 10,
+     "detected": 1,
+     "recall": 0.1,
+     "median_ttd_min": 172
+    },
+    "flatline": {
+     "faults": 10,
+     "detected": 0,
+     "recall": 0.0,
+     "median_ttd_min": null
+    }
+   },
+   "missed": [
+    {
+     "seed": 101,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": -18.8
+    },
+    {
+     "seed": 101,
+     "fault": "flatline",
+     "target": "AIT-301",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 102,
+     "fault": "flatline",
+     "target": "AIT-301",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 102,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": -17.8
+    },
+    {
+     "seed": 103,
+     "fault": "flatline",
+     "target": "FIT-101",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 103,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 12.18
+    },
+    {
+     "seed": 104,
+     "fault": "flatline",
+     "target": "AIT-401",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 104,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 21.77
+    },
+    {
+     "seed": 105,
+     "fault": "flatline",
+     "target": "AIT-301",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 105,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 15.54
+    },
+    {
+     "seed": 106,
+     "fault": "flatline",
+     "target": "FIT-101",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 107,
+     "fault": "flatline",
+     "target": "FIT-101",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 107,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 12.56
+    },
+    {
+     "seed": 108,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 12.56
+    },
+    {
+     "seed": 108,
+     "fault": "flatline",
+     "target": "AIT-301",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 109,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": 23.91
+    },
+    {
+     "seed": 109,
+     "fault": "flatline",
+     "target": "AIT-401",
+     "magnitude": 0.0
+    },
+    {
+     "seed": 110,
+     "fault": "stuck_valve",
+     "target": "FV-101",
+     "magnitude": -22.41
+    },
+    {
+     "seed": 110,
+     "fault": "flatline",
+     "target": "AIT-401",
+     "magnitude": 0.0
+    }
+   ]
+  },
+  "full": {
+   "runs": 10,
+   "faults": 70,
+   "detected": 70,
+   "recall": 1.0,
+   "precision": 0.917,
+   "true_alerts": 407,
+   "false_alerts": 37,
+   "false_alerts_per_day": 0.93,
+   "median_ttd_min": 13.0,
+   "peak_alerts_10min": 8,
+   "peak_alerts_10min_without_suppression": 8,
+   "by_fault": {
+    "ph_drift": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 13.0
+    },
+    "pump_clog": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 32.0
+    },
+    "tank_low": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 31.5
+    },
+    "shock_load": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 0.0
+    },
+    "blower_fail": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 0.0
+    },
+    "stuck_valve": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 2.0
+    },
+    "flatline": {
+     "faults": 10,
+     "detected": 10,
+     "recall": 1.0,
+     "median_ttd_min": 29.0
+    }
+   },
+   "missed": []
+  }
+ },
+ "seconds": 131.4
+}

@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Valve FV-101 position does not follow command (rule FV-101.DISC, tag ZT-101) with position 60.3% against command 37.9% and a gap of 22.5. An unusual plant behaviour correlation alarm is also active for AIT-201B, AIT-201, and FV-101.\",\n \"likely_causes\": [\n  \"Loss of instrument air to the actuator, or a failed positioner.\",\n  \"Fibre and lint jamming the valve trim, or a seized stem.\",\n  \"Position transmitter fault (the valve moves but ZT-101 does not).\"\n ],\n \"checks\": [\n  \"Check the instrument air pressure at the actuator and the positioner output.\",\n  \"Look at the valve stem and position indicator locally and compare them with ZT-101 on the HMI.\",\n  \"Check whether the forward flow FIT-102 changes when the command changes.\",\n  \"Compare the influent flow FIT-101 with the forward flow FIT-102.\",\n  \"Check the level locally on the tank gauge.\"\n ],\n \"handover\": \"Valve FV-101 position does not follow command with ZT-101 at 60.3% and command at 37.9% (gap 22.5), raising a discrepancy alarm at 10:02 and a correlation alarm at 10:07. Verify instrument air pressure and check the valve stem and position indicator locally against HMI tag ZT-101.\",\n \"citations\": [\n  \"SOP-07 7.2\",\n  \"SOP-07 7.3\",\n  \"SOP-07 7.4\",\n  \"SOP-11 11.3\",\n  \"SOP-11 11.4\"\n ]\n}"
+ },
+ "prompt_tokens": 2048,
+ "completion_tokens": 432,
+ "latency_s": 2.223
+}

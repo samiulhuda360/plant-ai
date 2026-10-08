@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"The soda ash solution tank level (LIT-901) is falling fast, dropping by -17.4% over 60 minutes with the current level at 17.0%. The most likely cause is a dissolving system fault, an open or passing tank drain/flush valve, or a level transmitter fault.\",\n \"likely_causes\": [\n  \"Dissolving system fault: soda ash or salt silo empty, feeder blocked, or make-up water valve closed.\",\n  \"A drain or flush valve on the tank left open or passing.\",\n  \"Level transmitter fault.\"\n ],\n \"checks\": [\n  \"Compare the level transmitter with the tank sight glass.\",\n  \"Walk the tank bund for an open drain valve or leak.\",\n  \"Check the silo level, the screw feeder and the make-up water valve of the dissolving system.\",\n  \"Check the solution strength with the conductivity or density check before batches resume.\"\n ],\n \"handover\": \"At 2026-10-05 10:51, LIT-901 was at 17.0% after raising a fast-falling level alarm at 10:36 with a rate of -17.4%. Verify the tank sight glass, bund for leaks or open drain valves, and check the dissolving system components per SOP-13.\",\n \"citations\": [\n  \"SOP-13 13.3\",\n  \"SOP-13 13.4\",\n  \"SOP-13 13.2\"\n ]\n}"
+ },
+ "prompt_tokens": 1391,
+ "completion_tokens": 348,
+ "latency_s": 2.297
+}

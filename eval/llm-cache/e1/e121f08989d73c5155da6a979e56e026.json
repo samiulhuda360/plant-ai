@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Blower B-301 is commanded on but not running since 2026-10-05 10:00, with blower power JT-301 dropping to zero kW and dissolved oxygen AIT-301 falling to 0.00 mg/L. The most likely cause is a blower motor overload trip, VFD fault, or loss of the motor supply.\",\n  \"likely_causes\": [\n    \"Blower motor overload trip, VFD fault, or loss of the motor supply.\",\n    \"High discharge pressure (diffuser fouling) or a closed air valve.\",\n    \"Belt failure, or a high bearing temperature shutdown.\"\n  ],\n  \"checks\": [\n    \"Check the VFD display and the motor control centre for the trip reason.\",\n    \"Check the blower discharge pressure and the air valve positions.\",\n    \"Look and listen for belt or bearing damage before any restart.\"\n  ],\n  \"handover\": \"Blower B-301 tripped at 10:00 on 2026-10-05, causing aeration basin dissolved oxygen AIT-301 to drop to 0.00 mg/L. Ask the control room to start the standby blower and investigate the tripped unit.\",\n  \"citations\": [\n    \"SOP-06 6.3\",\n    \"SOP-06 6.2\",\n    \"SOP-06 6.4\",\n    \"SOP-06 6.5\"\n  ]\n}"
+ },
+ "prompt_tokens": 1811,
+ "completion_tokens": 346,
+ "latency_s": 1.949
+}

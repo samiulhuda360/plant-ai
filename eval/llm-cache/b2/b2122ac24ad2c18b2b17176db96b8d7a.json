@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"An unusual plant behaviour alarm (PCA.SPE) is active in the pH correction and coagulation area, with AIT-201B (0.54) and AIT-201 (0.42) as top contributors due to probe disagreement. The most likely root cause is a drifting or fouled pH probe misleading the control loop.\",\n  \"likely_causes\": [\n    \"Fouling of the probe by dye, fibre lint or calcium deposits.\",\n    \"Reference junction poisoning, or an ageing electrode past its service life.\",\n    \"Water in the cable gland or a damaged probe cable.\"\n  ],\n  \"checks\": [\n    \"Take a grab sample from the pH correction tank and measure it with the calibrated hand-held meter.\",\n    \"Compare the hand-held reading with AIT-201, AIT-201B and the discharge pH AIT-501.\",\n    \"Check when each probe was last calibrated (calibration log) and whether it is due.\",\n    \"Inspect the probe for coating and the cable for damage.\"\n  ],\n  \"handover\": \"Investigated medium PCA anomaly on AIT-201 and AIT-201B showing probe disagreement in the pH correction tank. Current readings are AIT-201 at 7.20 pH and AIT-201B at 7.59 pH. Operator to perform grab sample checks and inspect probes per SOP-03.\",\n  \"citations\": [\n    \"SOP-03 3.2\",\n    \"SOP-03 3.3\",\n    \"SOP-03 3.4\",\n    \"SOP-02 2.4\"\n  ]\n}"
+ },
+ "prompt_tokens": 2178,
+ "completion_tokens": 385,
+ "latency_s": 2.199
+}

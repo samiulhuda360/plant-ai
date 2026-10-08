@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Coagulant pump P-202 is delivering less than commanded (FIT-202 at 2.03 L/h against P-202_SP at 5.01 L/h), leading to rising clarified water turbidity (AIT-401 at 14.8 NTU). The most likely cause is crystallised PAC in the injection quill or check valve problems, pump suction blockage, or air in the pump head.\",\n  \"likely_causes\": [\n    \"Crystallised PAC in the injection quill or the non-return valve\",\n    \"Worn or stuck pump check valves, or a ruptured diaphragm\",\n    \"Suction strainer blocked, or air in the pump head\",\n    \"Coagulant tank nearly empty\"\n  ],\n  \"checks\": [\n    \"Check the coagulant day tank level LIT-202 (now 52.0 %) to rule out an empty tank.\",\n    \"Check the pump stroke and the discharge pressure gauge: high pressure points to a blocked quill, low pressure to a suction or valve problem.\",\n    \"Do a drawdown test with the calibration column to measure the real delivered flow.\",\n    \"Look at the injection quill for white crystalline deposits.\"\n  ],\n  \"handover\": \"Coagulant pump P-202 low flow alarm active since 2026-10-05 10:34 with FIT-202 at 2.03 L/h and command at 5.01 L/h. Clarified water turbidity AIT-401 is rising to 14.8 NTU. Investigate pump checks and injection quill per SOP-04.\",\n  \"citations\": [\n    \"SOP-04 4.2\",\n    \"SOP-04 4.3\",\n    \"SOP-04 4.4\",\n    \"SOP-09 9.3\"\n  ]\n}"
+ },
+ "prompt_tokens": 1655,
+ "completion_tokens": 436,
+ "latency_s": 2.564
+}

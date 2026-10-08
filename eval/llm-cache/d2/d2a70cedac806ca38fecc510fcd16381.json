@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Coagulant day tank level LIT-202 is falling fast (-15.3 change over 60 minutes, now 30.6 %), which matches the rate-of-change alarm raised at 10:29. The most likely root causes include a bulk container or IBC empty, a transfer pump tripped or its suction valve closed, a drain or sample valve left open or passing, or a level transmitter fault.\",\n \"likely_causes\": [\n  \"Bulk container or IBC empty; a chemical delivery missed or late.\",\n  \"Transfer pump tripped or its suction valve closed.\",\n  \"A drain or sample valve on the day tank left open or passing.\",\n  \"Level transmitter fault (compare with the sight glass).\"\n ],\n \"checks\": [\n  \"Read the sight glass and compare it with the level transmitter LIT-202.\",\n  \"Walk the day tank bund: look for an open drain valve, a leak, or chemical in the bund.\",\n  \"Check the bulk container level and the transfer pump status.\",\n  \"Estimate the time to empty from the current level and the dosing rate.\"\n ],\n \"handover\": \"Coagulant day tank level LIT-202 is currently at 30.6 % and fell rapidly by 15.3 over the last 60 minutes, triggering LIT-202.ROC_FALL at 10:29. Operators should verify the day tank bund, check for leaks or open drain valves, and confirm the bulk container and transfer pump status as per SOP-05.\",\n \"citations\": [\n  \"SOP-05 5.3\",\n  \"SOP-05 5.2\",\n  \"SOP-05 5.4\",\n  \"SOP-05 5.5\"\n ]\n}"
+ },
+ "prompt_tokens": 1890,
+ "completion_tokens": 400,
+ "latency_s": 2.233
+}

@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Unusual plant behaviour (correlation broken) is active because AIT-201B is the top contributor with 0.81, and AIT-201 and AIT-201B disagree. A recent influent shock load with high influent flow (FIT-101 at 61.9 m3/h) also occurred.\",\n \"likely_causes\": [\n  \"Fouling of the probe by dye, fibre lint or calcium deposits.\",\n  \"Reference junction poisoning, or an ageing electrode past its service life.\",\n  \"Water in the cable gland or a damaged probe cable.\"\n ],\n \"checks\": [\n  \"Take a grab sample from the pH correction tank and measure it with the calibrated hand-held meter.\",\n  \"Compare the hand-held reading with AIT-201, AIT-201B and the discharge pH AIT-501.\",\n  \"Check when each probe was last calibrated (calibration log) and whether it is due.\",\n  \"Inspect the probe for coating and the cable for damage.\",\n  \"Compare the control probe AIT-201 with the check probe AIT-201B.\"\n ],\n \"handover\": \"Investigated unusual plant behavior alarm with AIT-201B as top contributor at 0.81 and probe disagreement present. Conducted checks per SOP-03 and SOP-02 while monitoring influent flow and pH correction parameters.\",\n \"citations\": [\n  \"SOP-03 3.2\",\n  \"SOP-03 3.3\",\n  \"SOP-03 3.4\",\n  \"SOP-02 2.4\"\n ]\n}"
+ },
+ "prompt_tokens": 2342,
+ "completion_tokens": 379,
+ "latency_s": 2.298
+}

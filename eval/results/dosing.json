@@ -1,0 +1,126 @@
+{
+ "tune": {
+  "seeds": [
+   1,
+   2,
+   3
+  ],
+  "days_per_run": 3,
+  "strategies": {
+   "fixed": {
+    "label": "Fixed-rate baseline (on/off acid 7.0-7.6, fixed PAC, blower 100 %)",
+    "acid_l_per_day": 334.6,
+    "coagulant_l_per_day": 192.0,
+    "blower_kwh_per_day": 864.0,
+    "plant_kwh_per_day": 1102.4,
+    "out_of_consent_pct": 10.21,
+    "out_of_consent_min_by_param": {
+     "AIT-501": 329,
+     "AIT-401": 1323,
+     "AIT-502": 128,
+     "TT-501": 0
+    },
+    "acid_change_pct": 0.0,
+    "coagulant_change_pct": 0.0,
+    "blower_energy_change_pct": 0.0
+   },
+   "adaptive": {
+    "label": "Adaptive (soft sensor + feed-forward + PI trims), pH 7.3",
+    "acid_l_per_day": 344.3,
+    "coagulant_l_per_day": 162.0,
+    "blower_kwh_per_day": 646.3,
+    "plant_kwh_per_day": 888.2,
+    "out_of_consent_pct": 0.0,
+    "out_of_consent_min_by_param": {
+     "AIT-501": 0,
+     "AIT-401": 0,
+     "AIT-502": 0,
+     "TT-501": 0
+    },
+    "acid_change_pct": 2.9,
+    "coagulant_change_pct": -15.6,
+    "blower_energy_change_pct": -25.2
+   },
+   "adaptive_ph7.6": {
+    "label": "Adaptive with the pH setpoint moved to 7.6",
+    "acid_l_per_day": 328.9,
+    "coagulant_l_per_day": 199.5,
+    "blower_kwh_per_day": 647.2,
+    "plant_kwh_per_day": 889.1,
+    "out_of_consent_pct": 0.0,
+    "out_of_consent_min_by_param": {
+     "AIT-501": 0,
+     "AIT-401": 0,
+     "AIT-502": 0,
+     "TT-501": 0
+    },
+    "acid_change_pct": -1.7,
+    "coagulant_change_pct": 3.9,
+    "blower_energy_change_pct": -25.1
+   }
+  }
+ },
+ "heldout": {
+  "seeds": [
+   101,
+   102,
+   103,
+   104,
+   105
+  ],
+  "days_per_run": 3,
+  "strategies": {
+   "fixed": {
+    "label": "Fixed-rate baseline (on/off acid 7.0-7.6, fixed PAC, blower 100 %)",
+    "acid_l_per_day": 329.9,
+    "coagulant_l_per_day": 192.0,
+    "blower_kwh_per_day": 864.0,
+    "plant_kwh_per_day": 1101.9,
+    "out_of_consent_pct": 4.31,
+    "out_of_consent_min_by_param": {
+     "AIT-501": 221,
+     "AIT-401": 930,
+     "AIT-502": 0,
+     "TT-501": 0
+    },
+    "acid_change_pct": 0.0,
+    "coagulant_change_pct": 0.0,
+    "blower_energy_change_pct": 0.0
+   },
+   "adaptive": {
+    "label": "Adaptive (soft sensor + feed-forward + PI trims), pH 7.3",
+    "acid_l_per_day": 334.3,
+    "coagulant_l_per_day": 153.2,
+    "blower_kwh_per_day": 641.3,
+    "plant_kwh_per_day": 882.8,
+    "out_of_consent_pct": 0.0,
+    "out_of_consent_min_by_param": {
+     "AIT-501": 0,
+     "AIT-401": 0,
+     "AIT-502": 0,
+     "TT-501": 0
+    },
+    "acid_change_pct": 1.3,
+    "coagulant_change_pct": -20.2,
+    "blower_energy_change_pct": -25.8
+   },
+   "adaptive_ph7.6": {
+    "label": "Adaptive with the pH setpoint moved to 7.6",
+    "acid_l_per_day": 318.9,
+    "coagulant_l_per_day": 192.6,
+    "blower_kwh_per_day": 642.0,
+    "plant_kwh_per_day": 883.5,
+    "out_of_consent_pct": 0.0,
+    "out_of_consent_min_by_param": {
+     "AIT-501": 0,
+     "AIT-401": 0,
+     "AIT-502": 0,
+     "TT-501": 0
+    },
+    "acid_change_pct": -3.3,
+    "coagulant_change_pct": 0.3,
+    "blower_energy_change_pct": -25.7
+   }
+  }
+ }
+}

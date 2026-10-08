@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Alarm [Medium] AIT-401 signal frozen (flatline) was raised at 2026-10-05 10:29 with a value of 10.8 NTU and unchanged minimum of 30 minutes, indicating that the clarified water turbidity measurement is flatlining. The most likely root causes are an analyser left in hold or calibration mode after maintenance, a transmitter failure with last-value hold configured, a communication fault, or a blocked sample line for the sampling analyser.\",\n \"likely_causes\": [\n  \"Analyser left in hold or calibration mode after maintenance.\",\n  \"Transmitter failure with last-value hold configured.\",\n  \"Communication fault: a remote I/O module, a gateway, or a fieldbus segment not updating.\",\n  \"Sample line blocked for a sampling analyser.\"\n ],\n \"checks\": [\n  \"Check the local display of the instrument and compare it with the HMI value.\",\n  \"Check the analyser status (hold, calibration, fault) and the maintenance log for recent work.\",\n  \"Check the communication diagnostics for the I/O module or gateway serving the tag.\",\n  \"Cross-check the process with a related measurement or a grab sample.\"\n ],\n \"handover\": \"Investigated AIT-401 signal frozen (flatline) alarm raised at 2026-10-05 10:29 with value 10.8 NTU. Verified local instrument display, analyser status, maintenance log, and communication diagnostics as per SOP-08.\",\n \"citations\": [\n  \"SOP-08 8.3\",\n  \"SOP-08 8.4\",\n  \"SOP-08 8.2\",\n  \"SOP-08 8.5\"\n ]\n}"
+ },
+ "prompt_tokens": 1658,
+ "completion_tokens": 400,
+ "latency_s": 2.366
+}

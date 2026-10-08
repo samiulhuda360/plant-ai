@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Influent pH is high at 14.0 pH alongside high temperature, turbidity, and conductivity, indicating an influent shock load from an un-held dye bath or caustic spill. The anomaly monitor also reports unusual plant behaviour led by influent tags.\",\n  \"likely_causes\": [\n    \"A dye bath or soaping bath drained without the scheduled hold in the dye-house sump.\",\n    \"Several dyeing machines finishing at the same time.\",\n    \"Caustic or soda ash spill washed to the drain in the dispensing room.\"\n  ],\n  \"checks\": [\n    \"Phone the dye-house supervisor: which machines drained, what recipe, and how many cubic metres.\",\n    \"Check the equalisation level trend and the free volume left before the high-high level.\",\n    \"Confirm the acid pump P-201 is running and the acid day tank level is adequate for the extra demand.\",\n    \"Confirm the coagulant pump P-202 has increased its rate and the coagulant tank is not low.\",\n    \"Watch the pH correction tank pH (AIT-201 and AIT-201B) and the clarified turbidity (AIT-401) for the next hour.\"\n  ],\n  \"handover\": \"Influent pH high alarm active at 14.0 pH due to an influent shock load from the dye-house. Checked equalisation level and acid pump operation; asked dye-house to hold further drains.\",\n  \"citations\": [\n    \"SOP-01 1.2\",\n    \"SOP-01 1.3\",\n    \"SOP-01 1.4\",\n    \"SOP-01 1.5\",\n    \"SOP-12 12.2\"\n  ]\n}"
+ },
+ "prompt_tokens": 2313,
+ "completion_tokens": 395,
+ "latency_s": 3.11
+}

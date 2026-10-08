@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Alarm AIT-401 signal frozen (flatline) is active in area 400 Clarifier since 2026-10-05 10:29 at a value of 10.2 NTU, with unchanged_min = 30 while related measurements continue to move. The most likely cause is an analyser left in hold or calibration mode after maintenance, a transmitter failure with last-value hold configured, a communication fault, or a blocked sample line.\",\n  \"likely_causes\": [\n    \"Analyser left in hold or calibration mode after maintenance.\",\n    \"Transmitter failure with last-value hold configured.\",\n    \"Communication fault: a remote I/O module, a gateway, or a fieldbus segment not updating.\",\n    \"Sample line blocked for a sampling analyser.\"\n  ],\n  \"checks\": [\n    \"Check the local display of the instrument and compare it with the HMI value.\",\n    \"Check the analyser status (hold, calibration, fault) and the maintenance log for recent work.\",\n    \"Check the communication diagnostics for the I/O module or gateway serving the tag.\",\n    \"Cross-check the process with a related measurement or a grab sample.\"\n  ],\n  \"handover\": \"AIT-401 signal has been flatlined at 10.2 NTU since 2026-10-05 10:29 (unchanged for 30 minutes). Verify local display against HMI, inspect analyser status and maintenance log for recent work, and check communication diagnostics.\",\n  \"citations\": [\n    \"SOP-08 8.3\",\n    \"SOP-08 8.4\",\n    \"SOP-08 8.2\",\n    \"SOP-08 8.5\"\n  ]\n}"
+ },
+ "prompt_tokens": 1658,
+ "completion_tokens": 407,
+ "latency_s": 2.246
+}

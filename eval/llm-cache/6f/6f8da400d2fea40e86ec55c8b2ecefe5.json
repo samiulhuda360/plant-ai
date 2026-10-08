@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Valve FV-101 is raising a discrepancy alarm because its position (ZT-101 at 57.0 %) does not follow the command (38.8), with an active gap of 18.2. The most likely cause is that fibre and lint have jammed the valve trim, a seized stem, a loss of instrument air, a failed positioner, or a position transmitter fault.\",\n  \"likely_causes\": [\n    \"Loss of instrument air to the actuator, or a failed positioner.\",\n    \"Fibre and lint jamming the valve trim, or a seized stem.\",\n    \"Position transmitter fault (the valve moves but ZT-101 does not).\"\n  ],\n  \"checks\": [\n    \"Check the instrument air pressure at the actuator and the positioner output.\",\n    \"Look at the valve stem and position indicator locally and compare them with ZT-101 on the HMI.\",\n    \"Check whether the forward flow FIT-102 changes when the command changes.\"\n  ],\n  \"handover\": \"Investigated alarm FV-101 position discrepancy raised at 2026-10-05 10:02 with valve position at 57.0 % and command at 38.8. Verified checks according to SOP-07 and prepared for valve maintenance or manual control if confirmed stuck.\",\n  \"citations\": [\n    \"SOP-07 7.3\",\n    \"SOP-07 7.4\",\n    \"SOP-07 7.2\"\n  ]\n}"
+ },
+ "prompt_tokens": 1799,
+ "completion_tokens": 354,
+ "latency_s": 2.183
+}

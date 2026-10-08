@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Coagulant pump P-202 is delivering less than commanded (FIT-202 well below P-202_SP) while the command rises as the controller tries to compensate, leading to clarified turbidity rising (AIT-401). The most likely causes are crystallised PAC in the injection quill or non-return valve, worn or stuck pump check valves, a ruptured diaphragm, a blocked suction strainer, air in the pump head, or an empty coagulant tank.\",\n \"likely_causes\": [\n  \"Crystallised PAC in the injection quill or the non-return valve\",\n  \"Worn or stuck pump check valves, or a ruptured diaphragm\",\n  \"Suction strainer blocked, or air in the pump head\",\n  \"Coagulant tank nearly empty\"\n ],\n \"checks\": [\n  \"Check the coagulant day tank level LIT-202 to rule out an empty tank.\",\n  \"Check the pump stroke and the discharge pressure gauge: high pressure points to a blocked quill, low pressure to a suction or valve problem.\",\n  \"Do a drawdown test with the calibration column to measure the real delivered flow.\",\n  \"Look at the injection quill for white crystalline deposits.\"\n ],\n \"handover\": \"Coagulant pump P-202 active alarm for delivering less than commanded remains unacknowledged, with FIT-202 at 2.27 L/h and clarified turbidity AIT-401 at 16.5 NTU. Operator to complete checks for crystallised PAC, check valves, suction strainer, and tank level per SOP-04.\",\n \"citations\": [\n  \"SOP-04 4.2\",\n  \"SOP-04 4.3\",\n  \"SOP-04 4.4\",\n  \"SOP-09 9.3\",\n  \"SOP-09 9.4\"\n ]\n}"
+ },
+ "prompt_tokens": 2162,
+ "completion_tokens": 423,
+ "latency_s": 2.286
+}

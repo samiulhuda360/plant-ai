@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"An active alarm for Influent pH high (AIT-101) raised at 2026-10-05 10:01 with a value of 14.0 pH. The most likely root cause is a dye bath or soaping bath drained without the scheduled hold in the dye-house sump, or a caustic/soda ash spill washed to the drain in the dispensing room.\",\n \"likely_causes\": [\n  \"A dye bath or soaping bath drained without the scheduled hold in the dye-house sump.\",\n  \"Several dyeing machines finishing at the same time.\",\n  \"Caustic or soda ash spill washed to the drain in the dispensing room.\"\n ],\n \"checks\": [\n  \"Phone the dye-house supervisor: which machines drained, what recipe, and how many cubic metres.\",\n  \"Check the equalisation level trend and the free volume left before the high-high level.\",\n  \"Confirm the acid pump P-201 is running and the acid day tank level is adequate for the extra demand.\",\n  \"Confirm the coagulant pump P-202 has increased its rate and the coagulant tank is not low.\",\n  \"Watch the pH correction tank pH (AIT-201 and AIT-201B) and the clarified turbidity (AIT-401) for the next hour.\"\n ],\n \"handover\": \"Influent pH reached 14.0 at 10:01 alongside high temperature, turbidity, conductivity, and flow excursions due to an influent shock load. Plant is monitoring equalisation and acid dosing while coordinating with the dye-house.\",\n \"citations\": [\n  \"SOP-01 1.3\",\n  \"SOP-01 1.2\",\n  \"SOP-01 1.4\"\n ]\n}"
+ },
+ "prompt_tokens": 2268,
+ "completion_tokens": 405,
+ "latency_s": 2.234
+}

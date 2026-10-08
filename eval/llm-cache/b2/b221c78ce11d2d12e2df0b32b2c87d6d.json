@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Coagulant pump P-202 is delivering less than commanded (FIT-202 is at 2.70 L/h while P-202_SP is 6.56 L/h), raising the P-202.LOWFLOW alarm at 2026-10-05 10:40. The most likely root causes are crystallised PAC in the injection quill or non-return valve, worn or stuck pump check valves, a ruptured diaphragm, a blocked suction strainer, air in the pump head, or an empty tank.\",\n  \"likely_causes\": [\n    \"Crystallised PAC in the injection quill or the non-return valve\",\n    \"Worn or stuck pump check valves, or a ruptured diaphragm\",\n    \"Suction strainer blocked, or air in the pump head\",\n    \"Coagulant tank nearly empty\"\n  ],\n  \"checks\": [\n    \"Check the coagulant day tank level LIT-202 (currently 46.8 %) to rule out an empty tank.\",\n    \"Check the pump stroke and the discharge pressure gauge: high pressure points to a blocked quill, low pressure to a suction or valve problem.\",\n    \"Do a drawdown test with the calibration column to measure the real delivered flow.\",\n    \"Look at the injection quill for white crystalline deposits.\"\n  ],\n  \"handover\": \"Coagulant pump P-202 low flow alarm (FIT-202 at 2.70 L/h versus P-202_SP at 6.56 L/h) has been active since 2026-10-05 10:40, accompanied by rising clarified turbidity (AIT-401 at 14.2 NTU). Investigate pump check valves, suction strainer, and injection quill for crystallised PAC or blockages.\",\n  \"citations\": [\n    \"SOP-04 4.3\",\n    \"SOP-04 4.2\",\n    \"SOP-04 4.4\",\n    \"SOP-09 9.3\"\n  ]\n}"
+ },
+ "prompt_tokens": 1655,
+ "completion_tokens": 479,
+ "latency_s": 2.195
+}

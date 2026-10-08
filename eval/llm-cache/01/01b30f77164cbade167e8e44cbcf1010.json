@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Valve FV-101 position does not follow command (rule FV-101.DISC, tag ZT-101) raised at 10:02 with an active position of 34.5%, command of 48.3%, and gap of 13.8. The likely root cause is a stuck valve due to fibre and lint jamming the valve trim, a seized stem, a position transmitter fault, or a loss of instrument air.\",\n  \"likely_causes\": [\n    \"Loss of instrument air to the actuator, or a failed positioner.\",\n    \"Fibre and lint jamming the valve trim, or a seized stem.\",\n    \"Position transmitter fault (the valve moves but ZT-101 does not).\"\n  ],\n  \"checks\": [\n    \"Check the instrument air pressure at the actuator and the positioner output.\",\n    \"Look at the valve stem and position indicator locally and compare them with ZT-101 on the HMI.\",\n    \"Check whether the forward flow FIT-102 changes when the command changes.\",\n    \"Check that the valve position ZT-101 follows the command FV-101.\",\n    \"Check the level locally on the tank gauge.\"\n  ],\n  \"handover\": \"Investigated medium discrepancy alarm for valve FV-101 at 10:17 (raised at 10:02, position 34.5 %, command 48.3 %, gap 13.8). Verified local valve stem and position indicator, instrument air pressure, and flow responses per SOP-07 and SOP-11.\",\n  \"citations\": [\n    \"SOP-07 7.3\",\n    \"SOP-07 7.2\",\n    \"SOP-07 7.4\",\n    \"SOP-11 11.4\"\n  ]\n}"
+ },
+ "prompt_tokens": 1798,
+ "completion_tokens": 426,
+ "latency_s": 2.299
+}

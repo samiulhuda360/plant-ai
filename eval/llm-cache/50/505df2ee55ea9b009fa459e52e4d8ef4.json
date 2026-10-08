@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"The influent pH analyser (AIT-101) is at its range limit at 14.0 pH, accompanied by high influent temperature (TT-101 at 62.6 degC), conductivity (AIT-102 at 17608 uS/cm), turbidity (AIT-103 at 1798 NTU), and flow (FIT-101 at 227 m3/h). This indicates a severe influent shock load caused by an unscheduled dye bath or soaping bath drain or a chemical spill in the dispensing room.\",\n  \"likely_causes\": [\n    \"A dye bath or soaping bath drained without the scheduled hold in the dye-house sump.\",\n    \"Several dyeing machines finishing at the same time.\",\n    \"Caustic or soda ash spill washed to the drain in the dispensing room.\"\n  ],\n  \"checks\": [\n    \"Phone the dye-house supervisor to ask which machines drained, what recipe, and how many cubic metres.\",\n    \"Check the equalisation level trend (LIT-101 at 3.25 m) and the free volume left before the high-high level.\",\n    \"Confirm the acid pump P-201 is running and the acid day tank level is adequate for the extra demand.\",\n    \"Confirm the coagulant pump P-202 has increased its rate and the coagulant tank is not low.\",\n    \"Watch the pH correction tank pH (AIT-201 and AIT-201B) and the clarified turbidity (AIT-401) for the next hour.\"\n  ],\n  \"handover\": \"Influent pH analyser AIT-101 reached range limit at 14.0 pH at 10:00 due to a major influent shock load with high temperature, conductivity, turbidity, and flow. Shift actions included monitoring alarms, checking equalisation tank level at 3.25 m, and coordinating with the dye house.\",\n  \"citations\": [\n    \"SOP-01 1.2\",\n    \"SOP-01 1.3\",\n    \"SOP-01 1.4\",\n    \"SOP-12 12.2\",\n    \"SOP-10 10.2\"\n  ]\n}"
+ },
+ "prompt_tokens": 2311,
+ "completion_tokens": 518,
+ "latency_s": 3.076
+}

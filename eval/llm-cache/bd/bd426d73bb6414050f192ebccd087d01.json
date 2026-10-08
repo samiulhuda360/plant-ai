@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Unusual plant behaviour (correlation broken) alarm has been raised for the pH correction and coagulation area, with the anomaly monitor showing a value of 45.1 against a limit of 12.0. The top contributor is AIT-201B at 0.83, indicating a disagreement between the pH correction tank probes AIT-201 (now 7.30 pH) and AIT-201B (now 7.07 pH) due to a drifting or fouled pH probe.\",\n \"likely_causes\": [\n  \"Fouling of the probe by dye, fibre lint or calcium deposits.\",\n  \"Reference junction poisoning, or an ageing electrode past its service life.\",\n  \"Water in the cable gland or a damaged probe cable.\"\n ],\n \"checks\": [\n  \"Take a grab sample from the pH correction tank and measure it with the calibrated hand-held meter.\",\n  \"Compare the hand-held reading with AIT-201, AIT-201B and the discharge pH AIT-501.\",\n  \"Check when each probe was last calibrated (calibration log) and whether it is due.\",\n  \"Inspect the probe for coating and the cable for damage.\",\n  \"Compare the control probe AIT-201 with the check probe AIT-201B.\"\n ],\n \"handover\": \"Investigated unusual plant behaviour alarm caused by pH probe disagreement in area 200. Checked AIT-201 (7.30 pH) and AIT-201B (7.07 pH) and noted AIT-201B as the top anomaly contributor. Pending grab sample verification and probe inspection according to SOP-03.\",\n \"citations\": [\n  \"SOP-03 3.2\",\n  \"SOP-03 3.3\",\n  \"SOP-03 3.4\",\n  \"SOP-02 2.4\"\n ]\n}"
+ },
+ "prompt_tokens": 2234,
+ "completion_tokens": 441,
+ "latency_s": 2.514
+}

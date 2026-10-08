@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n \"summary\": \"Unusual plant behaviour in area 200 has been flagged with an anomaly monitor value of 48.0, where AIT-201 and AIT-201B are the top contributors at 0.58 and 0.41. The root cause is likely a drifting or fouled pH probe misleading the correction loop, as AIT-201 reads 7.20 pH and AIT-201B reads 7.52 pH.\",\n \"likely_causes\": [\n  \"Fouling of the probe by dye, fibre lint or calcium deposits\",\n  \"Reference junction poisoning, or an ageing electrode past its service life\",\n  \"Water in the cable gland or a damaged probe cable\"\n ],\n \"checks\": [\n  \"Compare the control probe AIT-201 with the check probe AIT-201B\",\n  \"Take a grab sample from the pH correction tank and measure it with the calibrated hand-held meter\",\n  \"Compare the hand-held reading with AIT-201, AIT-201B and the discharge pH AIT-501\",\n  \"Check when each probe was last calibrated in the calibration log and whether it is due\",\n  \"Inspect the probe for coating and the cable for damage\"\n ],\n \"handover\": \"Investigated the unusual plant behaviour alarm in area 200 where AIT-201 and AIT-201B disagree (7.20 pH versus 7.52 pH). Perform probe checks and calibration verification per SOP-03 before returning the loop to automatic.\",\n \"citations\": [\n  \"SOP-03 3.2\",\n  \"SOP-03 3.3\",\n  \"SOP-03 3.4\",\n  \"SOP-02 2.4\"\n ]\n}"
+ },
+ "prompt_tokens": 2116,
+ "completion_tokens": 418,
+ "latency_s": 2.799
+}

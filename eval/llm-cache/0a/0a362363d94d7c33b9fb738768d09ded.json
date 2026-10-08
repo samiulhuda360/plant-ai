@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Blower B-301 is commanded on with a command of 1.00, but it is not running with a run status of 0.00 since 2026-10-05 10:00, causing dissolved oxygen AIT-301 to fall to 0.00 mg/L. The root cause is likely a blower motor overload trip, VFD fault, loss of motor supply, high discharge pressure, closed air valve, belt failure, or high bearing temperature shutdown.\",\n  \"likely_causes\": [\n    \"Blower motor overload trip, VFD fault, or loss of the motor supply.\",\n    \"High discharge pressure (diffuser fouling) or a closed air valve.\",\n    \"Belt failure, or a high bearing temperature shutdown.\"\n  ],\n  \"checks\": [\n    \"Check the VFD display and the motor control centre for the trip reason.\",\n    \"Check the blower discharge pressure and the air valve positions.\",\n    \"Look and listen for belt or bearing damage before any restart.\",\n    \"Check the dissolved oxygen trend and the blower status.\"\n  ],\n  \"handover\": \"Blower B-301 tripped at 2026-10-05 10:00 with power JT-301 dropping to 0.20 kW and dissolved oxygen AIT-301 at 0.00 mg/L. Investigate the trip reason at the VFD and motor control centre, and ask the control room to start the standby blower.\",\n  \"citations\": [\n    \"SOP-06 6.3\",\n    \"SOP-06 6.2\",\n    \"SOP-06 6.4\",\n    \"SOP-06 6.5\",\n    \"SOP-16 16.3\",\n    \"SOP-16 16.4\",\n    \"SOP-16 16.5\"\n  ]\n}"
+ },
+ "prompt_tokens": 1811,
+ "completion_tokens": 446,
+ "latency_s": 2.47
+}

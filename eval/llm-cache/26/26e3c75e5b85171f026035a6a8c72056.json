@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"Coagulant pump P-202 is delivering less than commanded, with FIT-202 at 3.02 L/h against a command of 9.15 L/h, causing clarified turbidity AIT-401 to rise to 16.9 NTU. The likely cause is crystallised PAC in the injection quill or non-return valve, worn pump check valves, a ruptured diaphragm, a blocked suction strainer, air in the pump head, or an almost empty coagulant day tank.\",\n  \"likely_causes\": [\n    \"Crystallised PAC in the injection quill or the non-return valve.\",\n    \"Worn or stuck pump check valves, or a ruptured diaphragm.\",\n    \"Suction strainer blocked, or air in the pump head.\",\n    \"Coagulant tank nearly empty.\"\n  ],\n  \"checks\": [\n    \"Check the coagulant day tank level LIT-202 to rule out an empty tank.\",\n    \"Check the pump stroke and the discharge pressure gauge: high pressure points to a blocked quill, low pressure to a suction or valve problem.\",\n    \"Do a drawdown test with the calibration column to measure the real delivered flow.\",\n    \"Look at the injection quill for white crystalline deposits.\"\n  ],\n  \"handover\": \"Coagulant pump P-202 active flow low alarm (FIT-202 at 3.02 L/h vs command 9.15 L/h) raised at 10:30, accompanied by rising clarified turbidity AIT-401 at 16.9 NTU. Complete checks on coagulant day tank level LIT-202 (at 44.0 %), pump discharge pressure, suction strainer, and injection quill per SOP-04 before restarting or changing over to the standby pump.\",\n  \"citations\": [\n    \"SOP-04 4.2\",\n    \"SOP-04 4.3\",\n    \"SOP-04 4.4\",\n    \"SOP-09 9.3\"\n  ]\n}"
+ },
+ "prompt_tokens": 2163,
+ "completion_tokens": 462,
+ "latency_s": 2.531
+}

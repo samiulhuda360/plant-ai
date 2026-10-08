@@ -1,0 +1,9 @@
+{
+ "model": "gemini-flash-lite-latest",
+ "message": {
+  "content": "{\n  \"summary\": \"An anomaly alarm was raised for PCA.SPE with AIT-201 and AIT-201B as top contributors, indicating a potential issue with the pH probes in the pH correction tank due to probe disagreement or fouling. AIT-201 reads 7.37 pH and AIT-201B reads 7.04 pH, showing an active divergence.\",\n  \"likely_causes\": [\n    \"Fouling of the probe by dye, fibre lint or calcium deposits.\",\n    \"Reference junction poisoning, or an ageing electrode past its service life.\",\n    \"Water in the cable gland or a damaged probe cable.\"\n  ],\n  \"checks\": [\n    \"Take a grab sample from the pH correction tank and measure it with the calibrated hand-held meter.\",\n    \"Compare the hand-held reading with AIT-201, AIT-201B and the discharge pH AIT-501.\",\n    \"Check when each probe was last calibrated (calibration log) and whether it is due.\",\n    \"Inspect the probe for coating and the cable for damage.\",\n    \"Compare the control probe AIT-201 with the check probe AIT-201B.\"\n  ],\n  \"handover\": \"Investigated PCA.SPE anomaly alarm driven by AIT-201 and AIT-201B disagreement in the pH correction tank. Verified current probe readings of 7.37 pH and 7.04 pH and recommended proceeding with SOP-03 immediate checks.\",\n  \"citations\": [\n    \"SOP-03 3.2\",\n    \"SOP-03 3.3\",\n    \"SOP-03 3.4\",\n    \"SOP-02 2.4\"\n  ]\n}"
+ },
+ "prompt_tokens": 2174,
+ "completion_tokens": 403,
+ "latency_s": 2.425
+}
