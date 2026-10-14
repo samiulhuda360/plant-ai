@@ -15,12 +15,12 @@ itself.
 
 ## A real-life example
 
-Ravi is the night-shift operator at the waste-water plant of Acme Textiles, a cotton dyeing mill.
+Tom is the night-shift operator at the waste-water plant of Acme Textiles, a cotton dyeing mill.
 
 **Before:** the chemical pumps run at a fixed rate sized for the worst case, so most of the time they overdose,
 and when a big batch of spent dye arrives they still fall behind and the discharge goes out of its legal limits.
 A fault such as a slowly drifting pH probe or a stuck valve is easy to miss among the alarms, and when the air
-blower trips at 3 a.m. Ravi has to find the right page in the procedures binder and then write up the handover
+blower trips at 3 a.m. Tom has to find the right page in the procedures binder and then write up the handover
 note for the morning shift.
 
 **With plant-ai:**
@@ -38,9 +38,9 @@ blower energy, and the discharge stayed inside its limits all of the time (again
 fixed dosing). All 70 planted faults were found, typically in 13 minutes rather than 45. The assistant picked the
 right procedure every time and answered in about 2.3 seconds.
 
-![Ravi's night shift in four steps: the plant screen, the blower incident, the assistant's explanation and the daily report](docs/screenshots/example.gif)
+![Tom's night shift in four steps: the plant screen, the blower incident, the assistant's explanation and the daily report](docs/screenshots/example.gif)
 
-*Ravi's night shift in four steps, from real screens of the dashboard: the plant at a glance, the blower failure
+*Tom's night shift in four steps, from real screens of the dashboard: the plant at a glance, the blower failure
 as one incident, the assistant's explanation and handover note, and the next day's discharge report.*
 
 ## How you would use it
